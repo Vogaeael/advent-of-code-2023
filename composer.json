@@ -1,0 +1,16 @@
+{
+    "name": "vogaeael/advent-of-code-2023",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Michael Vogel",
+            "email": "Michael-B-G-Vogel@gmx.de"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Vogaeael\\AdventOfCode2023\\": "src/"
+        }
+    },
+    "require": {}
+}
