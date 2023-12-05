@@ -2,6 +2,7 @@
 
 require 'vendor/autoload.php';
 
+use Vogaeael\AdventOfCode2023\day01\part02\AdvancedTrebuchetCalibration;
 use Vogaeael\AdventOfCode2023\TaskCollection;
 use Vogaeael\AdventOfCode2023\day01\part01\TrebuchetCalibration;
 
@@ -9,6 +10,7 @@ try {
     $tasks = new TaskCollection();
     $tasks->add([
         new TrebuchetCalibration(),
+        new AdvancedTrebuchetCalibration(),
         // @TODO add all tasks
     ]);
 

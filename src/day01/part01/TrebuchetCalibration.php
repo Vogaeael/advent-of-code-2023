@@ -29,7 +29,7 @@ class TrebuchetCalibration extends AbstractTask
         return $total;
     }
 
-    private function getFirstDigit(string $input): int
+    protected function getFirstDigit(string $input): int
     {
         $chars = str_split($input);
         foreach ($chars as $char) {
@@ -41,7 +41,7 @@ class TrebuchetCalibration extends AbstractTask
         return 0;
     }
 
-    private function getLastDigit(string $input): int
+    protected function getLastDigit(string $input): int
     {
         return $this->getFirstDigit(strrev($input));
     }
