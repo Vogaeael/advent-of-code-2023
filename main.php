@@ -2,15 +2,21 @@
 
 require 'vendor/autoload.php';
 
-use Vogaeael\AdventOfCode2023\day01\part02\AdvancedTrebuchetCalibration;
 use Vogaeael\AdventOfCode2023\TaskCollection;
 use Vogaeael\AdventOfCode2023\day01\part01\TrebuchetCalibration;
+use Vogaeael\AdventOfCode2023\day01\part02\AdvancedTrebuchetCalibration;
+use Vogaeael\AdventOfCode2023\day02\part01\CubesGame;
 
 try {
     $tasks = new TaskCollection();
     $tasks->add([
         new TrebuchetCalibration(),
         new AdvancedTrebuchetCalibration(),
+        new CubesGame([
+            'red' => 12,
+            'green' => 13,
+            'blue' => 14
+        ]),
         // @TODO add all tasks
     ]);
 
