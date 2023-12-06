@@ -5,6 +5,7 @@ require 'vendor/autoload.php';
 use Vogaeael\AdventOfCode2023\day02\part02\CubesGameLowestPossible;
 use Vogaeael\AdventOfCode2023\day03\part01\EngineNumberWithAdjacentSymbols;
 use Vogaeael\AdventOfCode2023\day03\part02\EngineAsteriskWithTwoAdjacentNumbers;
+use Vogaeael\AdventOfCode2023\day04\part01\ScratchCardsPoints;
 use Vogaeael\AdventOfCode2023\TaskCollection;
 use Vogaeael\AdventOfCode2023\day01\part01\TrebuchetCalibration;
 use Vogaeael\AdventOfCode2023\day01\part02\AdvancedTrebuchetCalibration;
@@ -23,6 +24,7 @@ try {
         new CubesGameLowestPossible(),
         new EngineNumberWithAdjacentSymbols(),
         new EngineAsteriskWithTwoAdjacentNumbers(),
+        new ScratchCardsPoints(),
         // @TODO add all tasks
     ]);
 
