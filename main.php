@@ -2,6 +2,7 @@
 
 require 'vendor/autoload.php';
 
+use Vogaeael\AdventOfCode2023\day02\part02\CubesGameLowestPossible;
 use Vogaeael\AdventOfCode2023\TaskCollection;
 use Vogaeael\AdventOfCode2023\day01\part01\TrebuchetCalibration;
 use Vogaeael\AdventOfCode2023\day01\part02\AdvancedTrebuchetCalibration;
@@ -17,6 +18,7 @@ try {
             'green' => 13,
             'blue' => 14
         ]),
+        new CubesGameLowestPossible(),
         // @TODO add all tasks
     ]);
 
