@@ -51,15 +51,4 @@ class ScratchCardsPoints extends AbstractTask
 
         return (int)$matches[1];
     }
-
-    /**
-     * @return int[]
-     */
-    protected function getNumbersOfInput(string $input): array
-    {
-        $matches = [];
-        preg_match_all('/\d+/', $input, $matches);
-
-        return $matches[0];
-    }
 }

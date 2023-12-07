@@ -31,4 +31,15 @@ abstract class AbstractTask implements TaskInterface
     {
         return explode(PHP_EOL, $input);
     }
+
+    /**
+     * @return int[]
+     */
+    protected function getNumbersOfInput(string $input): array
+    {
+        $matches = [];
+        preg_match_all('/\d+/', $input, $matches);
+
+        return $matches[0];
+    }
 }
