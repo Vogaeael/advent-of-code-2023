@@ -29,6 +29,7 @@ use Vogaeael\AdventOfCode2023\day07\part02\type\DetermineHighCardWithJoker;
 use Vogaeael\AdventOfCode2023\day07\part02\type\DetermineOnePairWithJoker;
 use Vogaeael\AdventOfCode2023\day07\part02\type\DetermineThreeOfAKindWithJoker;
 use Vogaeael\AdventOfCode2023\day07\part02\type\DetermineTwoPairWithJoker;
+use Vogaeael\AdventOfCode2023\day08\part01\StepsWithMap;
 use Vogaeael\AdventOfCode2023\TaskCollection;
 
 gc_enable();
@@ -68,7 +69,8 @@ try {
             new DetermineOnePairWithJoker(),
             new DetermineThreeOfAKindWithJoker(),
             new DetermineTwoPairWithJoker()
-        ])
+        ]),
+        new StepsWithMap(),
         // @TODO add all tasks
     ]);
 
