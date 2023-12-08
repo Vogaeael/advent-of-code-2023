@@ -12,6 +12,7 @@ use Vogaeael\AdventOfCode2023\day04\part01\ScratchCardsPoints;
 use Vogaeael\AdventOfCode2023\day04\part02\ScratchCardsPointsCopies;
 use Vogaeael\AdventOfCode2023\day05\part01\NearestSeedLocation;
 use Vogaeael\AdventOfCode2023\day06\part01\BoatRaceHowManyWaysToWin;
+use Vogaeael\AdventOfCode2023\day06\part02\BoatRaceHowManyWaysToWinWithoutSpace;
 use Vogaeael\AdventOfCode2023\TaskCollection;
 
 try {
@@ -31,6 +32,7 @@ try {
         new ScratchCardsPointsCopies(),
         new NearestSeedLocation(),
         new BoatRaceHowManyWaysToWin(),
+        new BoatRaceHowManyWaysToWinWithoutSpace(),
         // @TODO add all tasks
     ]);
 
