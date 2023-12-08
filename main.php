@@ -21,6 +21,14 @@ use Vogaeael\AdventOfCode2023\day07\part01\type\DetermineHighCard;
 use Vogaeael\AdventOfCode2023\day07\part01\type\DetermineOnePair;
 use Vogaeael\AdventOfCode2023\day07\part01\type\DetermineThreeOfAKind;
 use Vogaeael\AdventOfCode2023\day07\part01\type\DetermineTwoPair;
+use Vogaeael\AdventOfCode2023\day07\part02\CamelCardsWithJoker;
+use Vogaeael\AdventOfCode2023\day07\part02\type\DetermineFiveOfAKindWithJoker;
+use Vogaeael\AdventOfCode2023\day07\part02\type\DetermineFourOfAKindWithJoker;
+use Vogaeael\AdventOfCode2023\day07\part02\type\DetermineFullHouseWithJoker;
+use Vogaeael\AdventOfCode2023\day07\part02\type\DetermineHighCardWithJoker;
+use Vogaeael\AdventOfCode2023\day07\part02\type\DetermineOnePairWithJoker;
+use Vogaeael\AdventOfCode2023\day07\part02\type\DetermineThreeOfAKindWithJoker;
+use Vogaeael\AdventOfCode2023\day07\part02\type\DetermineTwoPairWithJoker;
 use Vogaeael\AdventOfCode2023\TaskCollection;
 
 gc_enable();
@@ -52,6 +60,15 @@ try {
            new DetermineThreeOfAKind(),
            new DetermineTwoPair()
         ]),
+        new CamelCardsWithJoker([
+            new DetermineFiveOfAKindWithJoker(),
+            new DetermineFourOfAKindWithJoker(),
+            new DetermineFullHouseWithJoker(),
+            new DetermineHighCardWithJoker(),
+            new DetermineOnePairWithJoker(),
+            new DetermineThreeOfAKindWithJoker(),
+            new DetermineTwoPairWithJoker()
+        ])
         // @TODO add all tasks
     ]);
 
