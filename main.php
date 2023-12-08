@@ -2,16 +2,17 @@
 
 require 'vendor/autoload.php';
 
+use Vogaeael\AdventOfCode2023\day01\part01\TrebuchetCalibration;
+use Vogaeael\AdventOfCode2023\day01\part02\AdvancedTrebuchetCalibration;
+use Vogaeael\AdventOfCode2023\day02\part01\CubesGame;
 use Vogaeael\AdventOfCode2023\day02\part02\CubesGameLowestPossible;
 use Vogaeael\AdventOfCode2023\day03\part01\EngineNumberWithAdjacentSymbols;
 use Vogaeael\AdventOfCode2023\day03\part02\EngineAsteriskWithTwoAdjacentNumbers;
 use Vogaeael\AdventOfCode2023\day04\part01\ScratchCardsPoints;
 use Vogaeael\AdventOfCode2023\day04\part02\ScratchCardsPointsCopies;
 use Vogaeael\AdventOfCode2023\day05\part01\NearestSeedLocation;
+use Vogaeael\AdventOfCode2023\day06\part01\BoatRaceHowManyWaysToWin;
 use Vogaeael\AdventOfCode2023\TaskCollection;
-use Vogaeael\AdventOfCode2023\day01\part01\TrebuchetCalibration;
-use Vogaeael\AdventOfCode2023\day01\part02\AdvancedTrebuchetCalibration;
-use Vogaeael\AdventOfCode2023\day02\part01\CubesGame;
 
 try {
     $tasks = new TaskCollection();
@@ -29,6 +30,7 @@ try {
         new ScratchCardsPoints(),
         new ScratchCardsPointsCopies(),
         new NearestSeedLocation(),
+        new BoatRaceHowManyWaysToWin(),
         // @TODO add all tasks
     ]);
 
