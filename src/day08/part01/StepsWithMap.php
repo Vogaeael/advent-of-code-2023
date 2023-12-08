@@ -28,7 +28,7 @@ class StepsWithMap extends AbstractTask
     {
         $this->handleInput($input);
 
-        return $this->howManyStepsUntilDestination();
+        return $this->howManyStepsUntilDestination(static::START);
     }
 
     protected function handleInput(string $input): void
@@ -59,11 +59,11 @@ class StepsWithMap extends AbstractTask
         }
     }
 
-    protected function howManyStepsUntilDestination(): int
+    protected function howManyStepsUntilDestination(string $start): int
     {
         $steps = 0;
-        $currentPosition = static::START;
-        while (static::DESTINATION !== $currentPosition) {
+        $currentPosition = $start;
+        while (!$this->isDestination($currentPosition)) {
             $steps++;
             $currentDirection = $this->determineDirectionOfStep($steps);
             $currentNodeMap = $this->nodeMap[$currentPosition];
@@ -78,5 +78,10 @@ class StepsWithMap extends AbstractTask
         $modular = ($step - 1) % count($this->instructions);
 
         return $this->instructions[$modular];
+    }
+
+    protected function isDestination(string $position): bool
+    {
+        return static::DESTINATION !== $position;
     }
 }
