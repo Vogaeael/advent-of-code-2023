@@ -11,9 +11,20 @@ use Vogaeael\AdventOfCode2023\day03\part02\EngineAsteriskWithTwoAdjacentNumbers;
 use Vogaeael\AdventOfCode2023\day04\part01\ScratchCardsPoints;
 use Vogaeael\AdventOfCode2023\day04\part02\ScratchCardsPointsCopies;
 use Vogaeael\AdventOfCode2023\day05\part01\NearestSeedLocation;
+use Vogaeael\AdventOfCode2023\day05\part02\NearestSeedLocationRange;
 use Vogaeael\AdventOfCode2023\day06\part01\BoatRaceHowManyWaysToWin;
 use Vogaeael\AdventOfCode2023\day06\part02\BoatRaceHowManyWaysToWinWithoutSpace;
+use Vogaeael\AdventOfCode2023\day07\part01\CamelCards;
+use Vogaeael\AdventOfCode2023\day07\part01\type\DetermineFiveOfAKind;
+use Vogaeael\AdventOfCode2023\day07\part01\type\DetermineFourOfAKind;
+use Vogaeael\AdventOfCode2023\day07\part01\type\DetermineFullHouse;
+use Vogaeael\AdventOfCode2023\day07\part01\type\DetermineHighCard;
+use Vogaeael\AdventOfCode2023\day07\part01\type\DetermineOnePair;
+use Vogaeael\AdventOfCode2023\day07\part01\type\DetermineThreeOfAKind;
+use Vogaeael\AdventOfCode2023\day07\part01\type\DetermineTwoPair;
 use Vogaeael\AdventOfCode2023\TaskCollection;
+
+gc_enable();
 
 try {
     $tasks = new TaskCollection();
@@ -31,8 +42,18 @@ try {
         new ScratchCardsPoints(),
         new ScratchCardsPointsCopies(),
         new NearestSeedLocation(),
+        new NearestSeedLocationRange(),
         new BoatRaceHowManyWaysToWin(),
         new BoatRaceHowManyWaysToWinWithoutSpace(),
+        new CamelCards([
+           new DetermineFiveOfAKind(),
+           new DetermineFourOfAKind(),
+           new DetermineFullHouse(),
+           new DetermineHighCard(),
+           new DetermineOnePair(),
+           new DetermineThreeOfAKind(),
+           new DetermineTwoPair()
+        ]),
         // @TODO add all tasks
     ]);
 
