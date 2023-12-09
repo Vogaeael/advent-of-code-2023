@@ -20,12 +20,8 @@ class NextInSequence extends AbstractTask
         $this->addInputAsMainSequencesIntoSequenceWrapper($input);
         $this->advanceSequenceWrapperWithLowerLevel();
         $this->advanceSequenceWrapperWithSteps();
-        $total = 0;
-        foreach ($this->sequenceWrapperCollection as $sequenceWrapper) {
-            $total += end($sequenceWrapper[0]);
-        }
 
-        return $total;
+        return $this->getTotalOfNewValuesInMainSequence();
     }
 
     protected function addInputAsMainSequencesIntoSequenceWrapper(string $input): void
@@ -136,5 +132,15 @@ class NextInSequence extends AbstractTask
         }
 
         return $sequence;
+    }
+
+    protected function getTotalOfNewValuesInMainSequence(): int
+    {
+        $total = 0;
+        foreach ($this->sequenceWrapperCollection as $sequenceWrapper) {
+            $total += end($sequenceWrapper[0]);
+        }
+
+        return $total;
     }
 }
