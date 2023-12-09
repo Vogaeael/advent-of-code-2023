@@ -38,8 +38,23 @@ abstract class AbstractTask implements TaskInterface
     protected function getNumbersOfInput(string $input): array
     {
         $matches = [];
-        preg_match_all('/\d+/', $input, $matches);
+        preg_match_all('/-*\d+/', $input, $matches);
 
         return $matches[0];
+    }
+
+    /**
+     * @param string[] $input
+     *
+     * @return int[]
+     */
+    protected function castStringArrayToIntArray(array $input): array
+    {
+        $numbers = [];
+        foreach ($input as $stringNumber) {
+            $numbers[] = (int) $stringNumber;
+        }
+
+        return $numbers;
     }
 }
