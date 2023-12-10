@@ -65,9 +65,9 @@ class NearestSeedLocation extends AbstractTask
             }
             $numbers = $this->getNumbersOfInput($mappingString);
             $maps[] = [
-                'sourceStart' => $numbers[1],
-                'destinationStart' => $numbers[0],
-                'length' => $numbers[2]
+                'sourceStart' => (int)$numbers[1],
+                'destinationStart' => (int)$numbers[0],
+                'length' => (int)$numbers[2]
             ];
         }
 
@@ -81,18 +81,24 @@ class NearestSeedLocation extends AbstractTask
     {
         $seedDestinations = [];
         foreach ($this->seeds as $seed) {
-            $nextMap = 'seed';
-            while (array_key_exists($nextMap, $this->mappings)) {
-                $currentMappingWrapper = $this->mappings[$nextMap];
-                $nextMap = $currentMappingWrapper['to'];
-                $currentMapping = $currentMappingWrapper['mappings'];
-
-                $seed = $this->getValueFromMapping($currentMapping, $seed);
-            }
-            $seedDestinations[] = $seed;
+            $seedDestinations[] = $this->getSeedDestination($seed);
         }
 
         return $seedDestinations;
+    }
+
+    protected function getSeedDestination(int $seed): int
+    {
+        $nextMap = 'seed';
+        while (array_key_exists($nextMap, $this->mappings)) {
+            $currentMappingWrapper = $this->mappings[$nextMap];
+            $nextMap = $currentMappingWrapper['to'];
+            $currentMapping = $currentMappingWrapper['mappings'];
+
+            $seed = $this->getValueFromMapping($currentMapping, $seed);
+        }
+
+        return $seed;
     }
 
     /**
